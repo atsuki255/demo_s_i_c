@@ -1,5 +1,5 @@
-import 'package:demo_s_i_c/book_list_page.dart';
-import 'package:demo_s_i_c/main_model.dart';
+import 'package:demo_s_i_c/book_list/book_list_page.dart';
+import 'package:demo_s_i_c/main/main_model.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
