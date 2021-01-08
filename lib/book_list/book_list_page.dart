@@ -39,6 +39,7 @@ class BookListPage extends StatelessWidget {
                 ),
               );
               model.fetchBooks();
+              //本一覧ををもう一度リロードし、表示する
             },
           );
         }),

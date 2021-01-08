@@ -47,6 +47,7 @@ class AddBookPage extends StatelessWidget {
                           },
                         );
                         Navigator.of(context).pop();
+                        //tryが成功すれば前の画面に戻る
                       } catch (e) {
                         showDialog(
                           context: context,
@@ -65,6 +66,7 @@ class AddBookPage extends StatelessWidget {
                           },
                         );
                       }
+                      //tryが成功しなければcatchが実行され、バリーデーションの文章が表示される
                     },
                   ),
                 ],
