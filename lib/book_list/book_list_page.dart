@@ -18,6 +18,23 @@ class BookListPage extends StatelessWidget {
             final listTiles = books
                 .map((book) => ListTile(
                       title: Text(book.title),
+                      trailing: IconButton(
+                        icon: Icon(Icons.edit),
+                        onPressed: () async {
+                          //TODO:画面遷移
+
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => AddBookPage(
+                                book: book,
+                              ),
+                              fullscreenDialog: true,
+                            ),
+                          );
+                          model.fetchBooks();
+                        },
+                      ),
                     ))
                 .toList();
             return ListView(
