@@ -1,22 +1,21 @@
 import 'package:demo_s_i_c/book_list/book_list_page.dart';
-
-import '../add_book/add_book_model.dart';
-import 'package:demo_s_i_c/signup/signup_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class SignUpPage extends StatelessWidget {
+import 'login_model.dart';
+
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final mailController = TextEditingController();
     final passwordController = TextEditingController();
-    return ChangeNotifierProvider<SignUpModel>(
-      create: (_) => SignUpModel(),
+    return ChangeNotifierProvider<LoginModel>(
+      create: (_) => LoginModel(),
       child: Scaffold(
         appBar: AppBar(
-          title: Text("新規登録"),
+          title: Text("ログイン"),
         ),
-        body: Consumer<SignUpModel>(
+        body: Consumer<LoginModel>(
           builder: (context, model, child) {
             return Padding(
               padding: const EdgeInsets.all(8.0),
@@ -42,11 +41,11 @@ class SignUpPage extends StatelessWidget {
                     },
                   ),
                   RaisedButton(
-                    child: Text("登録する"),
+                    child: Text("ログインする"),
                     onPressed: () async {
                       try {
-                        await model.signUp();
-                        _showDialog(context, "登録完了しました");
+                        await model.Login();
+                        _showDialog(context, "ログインが完了しました");
                         Navigator.push(
                             context,
                             MaterialPageRoute(

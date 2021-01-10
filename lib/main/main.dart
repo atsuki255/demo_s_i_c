@@ -1,4 +1,5 @@
 import 'package:demo_s_i_c/book_list/book_list_page.dart';
+import 'package:demo_s_i_c/login/login_page.dart';
 import 'package:demo_s_i_c/main/main_model.dart';
 import 'package:demo_s_i_c/signup/signup_page.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -32,12 +33,22 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   RaisedButton(
-                    child: Text("スタート！"),
+                    child: Text("新規登録"),
                     onPressed: () {
                       //ボタンを押すと何かする
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => SignUpPage()),
+                      );
+                    },
+                  ),
+                  RaisedButton(
+                    child: Text("ログイン"),
+                    onPressed: () {
+                      //ボタンを押すと何かする
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
                       );
                     },
                   ),
