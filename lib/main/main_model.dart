@@ -1,10 +1,9 @@
-
 import 'package:flutter/material.dart';
 
 class MainModel extends ChangeNotifier {
-  String appText = "カフェ情報共有アプリです";
+  String appText = "本の紹介アプリです";
 
-  void changeAppText(){
+  void changeAppText() {
     appText = "カフェで勉強しよう！！";
     notifyListeners();
   }

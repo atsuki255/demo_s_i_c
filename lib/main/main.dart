@@ -1,5 +1,6 @@
 import 'package:demo_s_i_c/book_list/book_list_page.dart';
 import 'package:demo_s_i_c/main/main_model.dart';
+import 'package:demo_s_i_c/signup/signup_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         create: (_) => MainModel(),
         child: Scaffold(
           appBar: AppBar(
-            title: Text("Studying-in-Cafe"),
+            title: Text("Bookers"),
           ),
           body: Consumer<MainModel>(builder: (context, model, child) {
             return Center(
@@ -31,12 +32,12 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   RaisedButton(
-                    child: Text("ボタン"),
+                    child: Text("スタート！"),
                     onPressed: () {
                       //ボタンを押すと何かする
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => BookListPage()),
+                        MaterialPageRoute(builder: (context) => SignUpPage()),
                       );
                     },
                   ),

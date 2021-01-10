@@ -11,10 +11,12 @@ class SignUpModel extends ChangeNotifier {
   Future signUp() async {
     if (mail.isEmpty) {
       throw ('メールアドレスを入力してください');
+      //バリデーション
     }
 
     if (password.isEmpty) {
       throw ('パスワードを入力してください');
+      //バリデーション
     }
 
     // todo
