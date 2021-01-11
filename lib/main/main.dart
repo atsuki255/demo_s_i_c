@@ -33,6 +33,16 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   RaisedButton(
+                    child: Text("本一覧"),
+                    onPressed: () {
+                      //ボタンを押すと何かする
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => BookListPage()),
+                      );
+                    },
+                  ),
+                  RaisedButton(
                     child: Text("新規登録"),
                     onPressed: () {
                       //ボタンを押すと何かする
