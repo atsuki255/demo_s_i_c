@@ -9,6 +9,7 @@ class BookListModel extends ChangeNotifier {
     final docs =
         // ignore: deprecated_member_use
         await Firestore.instance.collection('books').getDocuments();
+    // ignore: deprecated_member_use
     final books = docs.documents.map((doc) => Book(doc)).toList();
     this.books = books;
     notifyListeners();

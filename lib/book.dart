@@ -5,8 +5,10 @@ class Book {
     // ignore: deprecated_member_use
     documentID = doc.documentID;
     title = doc["title"];
+    imageURL = doc["imageURL"];
   }
 
   String documentID;
   String title;
+  String imageURL;
 }
