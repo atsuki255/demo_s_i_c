@@ -21,8 +21,7 @@ class AddBookModel extends ChangeNotifier {
     }
 
     final imageURL = await _uploadImage();
-    // ignore: deprecated_member_use
-    Firestore.instance.collection('books').add(
+    FirebaseFirestore.instance.collection('books').add(
       {
         'title': bookTitle,
         "imageURL": imageURL,
@@ -33,11 +32,9 @@ class AddBookModel extends ChangeNotifier {
 
   Future updateBook(Book book) async {
     final document =
-        // ignore: deprecated_member_use
-        Firestore.instance.collection("books").document(book.documentID);
+        FirebaseFirestore.instance.collection("books").doc(book.documentID);
     final imageURL = await _uploadImage();
-    // ignore: deprecated_member_use
-    await document.updateData(
+    await document.update(
       {
         'title': bookTitle,
         "imageURL": imageURL,

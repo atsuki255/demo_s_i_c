@@ -1,6 +1,6 @@
 import 'package:demo_s_i_c/book_list/book_list_page.dart';
 
-import '../add_book/add_book_model.dart';
+import 'package:demo_s_i_c/add_book/add_book_model.dart';
 import 'package:demo_s_i_c/signup/signup_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

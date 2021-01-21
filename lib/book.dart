@@ -2,10 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Book {
   Book(DocumentSnapshot doc) {
-    // ignore: deprecated_member_use
-    documentID = doc.documentID;
-    title = doc["title"];
-    imageURL = doc["imageURL"];
+    documentID = doc.id;
+    title = doc.data()["title"];
+    imageURL = doc.data()["imageURL"];
   }
 
   String documentID;
